@@ -1,26 +1,62 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@custom-variant dark (&:where(.dark, .dark *));
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 270 70% 96%;
+    --accent-foreground: 270 70% 60%;
+    --border: 0 0% 90%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 270 30% 20%;
+    --accent-foreground: 270 70% 60%;
+    --border: 0 0% 20%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme{
+  --color-primary-light: #A247EF;
+  --color-error:#EF478C;
+  /* --color-primary-dark: #D7B5EE; no needed yet */
+
+  --color-secondary-light: #E9D0FA;
+  /* --color-secondary-dark: #AD62E1; no needed yet */
+}
+
+/* Font families */
+.font-serif {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.font-sans {
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.font-mono {
+  font-family: "Courier New", monospace;
+}
+
+/* Custom triangle for play button */
+.border-l-12 {
+  border-left-width: 12px;
 }
