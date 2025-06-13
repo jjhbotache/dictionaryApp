@@ -74,3 +74,4 @@ yarn test
 * View the optimal interface layout based on the device screen size
 * See hover and focus states for all interactive elements on the page
 * Implement a search history functionality that includes the date and time of each search
+
