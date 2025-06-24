@@ -82,7 +82,7 @@ export default function DictionaryPage() {
 
 
         {/* Estado de carga y errores */}
-        {status === 'idle' && <p className="text-center py-4">Search a word to get started</p>}
+        {status === 'idle' && <p className="text-center py-4">Search a word to get started!!!!!</p>}
         {status === 'loading' && <WordDefinitionSkeleton />}
         {status === 'failed' && <p className="text-center py-4 text-error">{error}</p>}
 
